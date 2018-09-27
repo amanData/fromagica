@@ -1,0 +1,23 @@
+body {
+	width: 100%;
+	text-align: center;
+	background-image: url('images/cheese-aseprite/background-tile-pale.png')
+}
+
+
+h1 {
+	font-family: 'Metamorphous';
+	font-size: 50px;
+	color: #2c2445;
+	text-shadow: 0 0 10px #550055;
+}
+
+#cheddar {
+	background: none;
+	border: none;
+}
+
+#cheddar:hover {
+	transform: scale(1.02);
+	cursor: pointer;
+}
