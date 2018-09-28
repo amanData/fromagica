@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Fromagie</title>
+	<title>Fromagica</title>
 	<meta charset="utf-8">
-	<link href="https://fonts.googleapis.com/css?family=Black+And+White+Picture|Metamorphous" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto+Slab|Metamorphous" rel="stylesheet">
+
 </head>
 
 <body>
 	<header>
-		<h1>Fromagie</h1>
+		<h1>Fromagica</h1>
 	</header>
 
 	<div id="cheese">
-		<button type='button' id="cheddar" onclick="genLacticMana(1)"><img src="images/cheese-aseprite/cheddar.png"></button>
+		<button type='button' id="cheeseBtn" onclick="genFromana(1)"><img id="cheddar" src="images/cheese-aseprite/cheddar.png"></button>
 	</div>
 
 	<div id="ressources">
-		Mana lactique : <span id="lM"></span>
+		Fromana : <span id="fm"></span>
+	</div>
+
+	<div id="upgrades">
+		<button id="magicSchool" onclick="buyRuneWheel()">Go to dairy magic school</button>
+		Cost : <span id=schoolCost>10</span> fromana
 	</div>
 
 
 	<link rel="stylesheet" type="text/css" href="stylesheet.css">
 	<script type="text/javascript" src="script.js"></script>
+	
 </body>
 </html>

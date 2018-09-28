@@ -4,7 +4,6 @@ body {
 	background-image: url('images/cheese-aseprite/background-tile-pale.png')
 }
 
-
 h1 {
 	font-family: 'Metamorphous';
 	font-size: 50px;
@@ -12,12 +11,21 @@ h1 {
 	text-shadow: 0 0 10px #550055;
 }
 
-#cheddar {
+#ressources {
+	background-color: rgba(255,255,255,0.5);
+	font-family: "Roboto Slab";
+}
+
+#ressources > span {
+	font-family: "Roboto Mono";
+}
+
+#cheeseBtn {
 	background: none;
 	border: none;
 }
 
-#cheddar:hover {
+#cheeseBtn:hover {
 	transform: scale(1.02);
 	cursor: pointer;
 }
