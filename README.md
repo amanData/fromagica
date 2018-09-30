@@ -1,3 +1,3 @@
-# Fromagie
+# Fromagica
 
-[WIP] Jeu incrémentiel en projet sur le thème de la magie fromagère
+[WIP] Incremental/idle game project focused on cheese magic with heavy crafting mechanics
