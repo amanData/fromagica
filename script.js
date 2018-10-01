@@ -8,16 +8,21 @@ var attendingMagicSchool = false;
 
 /* FUNCTIONS */
 
+function prettify(input){
+    var output = Math.round(input * 1000000)/1000000;
+	return output;
+}
+
 function genFromana(x) {
 	fromana = fromana + x;
-	fmDisplay.innerHTML = Math.floor(fromana);
+	fmDisplay.innerHTML = prettify(fromana);
 };
 
 function buyRuneWheel() {
-	if (fromana >= 10) {
+	if (fromana >= 24) {
 		document.getElementById('cheddar').src="images/cheese-aseprite/cheddar-rune.png";
-		fromana = fromana - 10;
-		fmDisplay.innerHTML = Math.floor(fromana);
+		fromana = fromana - 24;
+		fmDisplay.innerHTML = prettify(fromana);
 		document.getElementById('magicSchool').disabled = true;
 		attendingMagicSchool = true;
 	}
@@ -41,10 +46,7 @@ window.setInterval(function(){
 	if (attendingMagicSchool == true){
 		genFromana(0.1)
 	}
-	
 
-	fmDisplay.innerHTML = Math.floor(fromana);
+
+	fmDisplay.innerHTML = prettify(fromana);
 }, 1000);
-
-
-

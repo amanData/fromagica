@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Fromagica</title>
 	<meta charset="utf-8">
-	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto+Slab|Metamorphous" rel="stylesheet">
-
+	<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Roboto+Mono|Roboto+Slab" rel="stylesheet">
 </head>
 
 <body>
@@ -12,25 +12,37 @@
 		<h1><img src="images/cheese-aseprite/fromagica.png"></h1>
 	</header>
 
-	<div id="cheese">
-		<button type='button' id="cheeseBtn" onclick="genFromana(1)"><img id="cheddar" src="images/cheese-aseprite/cheddar.png"></button>
+
+	<div id="gameboard">
+
+		<!-- CHEESE SECTION -->
+		<div id="cheese">
+			<button type='button' id="cheeseBtn" onclick="genFromana(1)"><img id="cheddar" src="images/cheese-aseprite/cheddar.png"></button>
+		</div>
+
+
+		<!-- FROMANA SECTION -->
+		<div id="fromana">
+			Fromana : <span id="fm"></span> <img src="images/cheese-aseprite/fromana.png">
+		</div>
+
+		<!-- CRAFTING SECTION -->
+
+		<div id="upgrades">
+			<button id="magicSchool" onclick="buyRuneWheel()">Go to dairy magic school</button>
+			Cost : <span id=schoolCost>24</span> fromana
+		</div>
+
 	</div>
 
-	<div id="ressources">
-		Fromana : <span id="fm"></span> <img src="images/cheese-aseprite/fromana.png">
-	</div>
-
-	<div id="upgrades">
-		<button id="magicSchool" onclick="buyRuneWheel()">Go to dairy magic school</button>
-		Cost : <span id=schoolCost>10</span> fromana
-	</div>
 
 
-	
-  
-  
-  	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+
+
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
 	<script type="text/javascript" src="script.js"></script>
-	
+
 </body>
+
 </html>
