@@ -9,32 +9,48 @@
 
 <body>
 	<header>
-		<h1><img src="images/cheese-aseprite/fromagica.png"></h1>
+		<img src="images/cheese-aseprite/fromagica.png" alt="fromagica">
 	</header>
-
-
-	<div id="gameboard">
-
-		<!-- CHEESE SECTION -->
-		<div id="cheese">
-			<button type='button' id="cheeseBtn" onclick="genFromana(1)"><img id="cheddar" src="images/cheese-aseprite/cheddar.png"></button>
+	<main>
+		<div class="leftPanel">
+			<section class="cheeseFacts">
+				<h2>Cheese Facts</h2>
+				<p>Your cheese is actually so tasty that it produces magic juices. This is what fromana is.</p>
+			</section>
+			<section class="craftArea">
+				<h2>Crafting area</h2>
+				<div class="hexCraft">
+					<h3>Hexagone of craft</h3>
+				</div>
+				<div class="runeLibrary">
+					<h3>Rune library</h3>
+				</div>
+			</section>
 		</div>
 
+		<section class="gameboard">
+			<!-- SCHOOL SECTION -->
+			<div class="school">
+				<div id="cheese">
+					<div class="fromana">
+					Fromana : <span id="fm"></span>
+					</div>
+					<button type='button' id="cheeseBtn" onclick="genFromana(1)"><img id="cheddar" src="images/cheese-aseprite/cheddar.png"></button>
+				</div>
+				<div class="timetable">
+					<h2>Timetable</h2>
+					<div id="upgrades">
+					<button id="magicSchool" onclick="buyRuneWheel()">Go to dairy magic school</button>
+					Cost : <span id=schoolCost>24</span> fromana
+					</div>
+				</div>
+			</div>
 
-		<!-- FROMANA SECTION -->
-		<div id="fromana">
-			Fromana : <span id="fm"></span> <img src="images/cheese-aseprite/fromana.png">
-		</div>
-
-		<!-- CRAFTING SECTION -->
-
-		<div id="upgrades">
-			<button id="magicSchool" onclick="buyRuneWheel()">Go to dairy magic school</button>
-			Cost : <span id=schoolCost>24</span> fromana
-		</div>
-
-	</div>
-
+			
+			
+			<img src="images/cheese-aseprite/fromana.png">		
+		</section>
+	</main>
 
 
 

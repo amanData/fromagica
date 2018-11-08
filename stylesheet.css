@@ -47,7 +47,11 @@ table {
 	border-spacing: 0;
 }
 
-/***************END RESET CSS********************/
+/*
+#############################################
+				END RESET CSS
+#############################################
+*/
 
 *{
 	box-sizing: border-box;
@@ -55,7 +59,11 @@ table {
 }
 
 
-/***************SHIT GOING DOWN*******************/
+/*
+#############################################
+				SHIT GOING DOWN
+#############################################
+*/
 
 body {
 	text-align: center;
@@ -63,19 +71,95 @@ body {
 	/*background-image: url('images/cheese-aseprite/background-tile-pale.png');*/
 	font-family: "Roboto Slab";
 }
+h2 {
+	padding: 5px 0;
+	background: rgba(255,255,255,0.5);
+	font-size: 110%;
+}
+h3 {
+	padding: 5px 0;
+}
 
-#gameboard {
+/*
+#############################################
+				HEADER
+#############################################
+*/
+
+header {
+	padding: 10px 0;
+	background-color: darkcyan;
+}
+
+/*
+#############################################
+				MAIN
+#############################################
+*/
+
+main {
 	display: flex;
+}
+
+/*
+#############################################
+				LEFT PANEL
+#############################################
+*/
+
+.leftPanel {
+	width: 35%;
+	background: darkslateblue;
+	padding: 10px;
+}
+.cheeseFacts {
+	background-color: wheat;
+	border: 2px dotted #444;
+}
+.craftArea {
+	margin-top: 10px;
+}
+.hexCraft {
+	height: 300px;
+	background: aquamarine;
+}
+.runeLibrary {
+	height: 100px;
+	background: violet;
+}
+
+/*
+#############################################
+				GAMEBORD
+#############################################
+*/
+
+.gameboard {
+	background: seagreen;
+	width: 65%;
+	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-evenly;
 	align-items: center;
 }
-
-#fromana {
+.school {
+	display: flex;
+	width: 100%;
+}
+#cheese{
+	width: 40%;
+	background: red;
+}
+.timetable {
+	width:60%;
+	background: green;
+}
+.fromana {
 	background-color: rgba(150,150,150,0.5);
 	display: flex;
 	justify-content: space-evenly;
-	align-items: center;
-	width: 25vw;
+	padding: 5px 0;
+	font-size: 110%;
 }
 
 
@@ -86,6 +170,7 @@ body {
 #cheeseBtn {
 	background: none;
 	border: none;
+	margin: 10px 0;
 }
 
 #cheeseBtn:hover {
