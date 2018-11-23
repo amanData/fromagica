@@ -69,19 +69,27 @@ var freeSpace = document.getElementsByClassName('notFull');
 var fromanaBottle = document.getElementById('fromanaBottle');
 var inventory = document.getElementsByClassName('inventory');
 
+// creating the rune <img>
+var affinageRune = document.createElement('img');
+affinageRune.src="images/cheese-aseprite/rune-affinage.png";
+affinageRune.style="width:100%";
+// cloning the rune <img>
+var cloneRuneAff = affinageRune.cloneNode(true);
 
 
-function manipulateInv() {
-		freeSpace.item(0).childNodes[0].src="images/cheese-aseprite/rune-affinage.png";
-		freeSpace.item(0).classList.add('full');
-		freeSpace.item(0).classList.remove("notFull");
-		if (freeSpace.length == 0) {
-		inventory.item(0).classList.add("full");
-		fromanaBottle.classList.remove('active');
-		fromanaBottle.removeEventListener("click", manipulateInv)
-		}
-	};
-fromanaBottle.addEventListener("click", manipulateInv);
+function dropRune() {
+	// cloning the rune <img> to prevent it from disappearing with new click
+	var clnRuneAffinage = affinageRune.cloneNode(true);
+	freeSpace.item(0).appendChild(clnRuneAffinage);
+	freeSpace.item(0).classList.add('full');
+	freeSpace.item(0).classList.remove("notFull");
+	if (freeSpace.length == 0) {
+	inventory.item(0).classList.add("full");
+	fromanaBottle.classList.remove('active');
+	fromanaBottle.removeEventListener("click", dropRune)
+	}
+};
+fromanaBottle.addEventListener("click", dropRune);
 
 
 
