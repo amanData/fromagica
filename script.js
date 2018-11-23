@@ -42,17 +42,46 @@ function buyRuneWheel() {
 
 /*
 ##################################################
-			MANIPULATION
+			FROMANA ON CHEDDAR WHEEL CLICK
+##################################################
+*/
+var cheeseBtn = document.getElementById('cheeseBtn');
+function clickWheel(){
+	genFromana(1);
+}
+cheeseBtn.addEventListener("click", clickWheel);
+
+/*
+##################################################
+			FROMANA ON CHEDDAR WHEEL CLICK
+##################################################
+*/
+var magicSchool = document.getElementById('magicSchool');
+magicSchool.addEventListener('click', buyRuneWheel);
+
+/*
+##################################################
+			INVENTORY MANIPULATION
 ##################################################
 */
 // Dropping a rune in the inventory when the fromana bottle is clicked
 var freeSpace = document.getElementsByClassName('notFull');
 var fromanaBottle = document.getElementById('fromanaBottle');
-fromanaBottle.addEventListener("click", function() {
-		freeSpace.item(0).style="background: #fff";
+var inventory = document.getElementsByClassName('inventory');
+
+
+
+function manipulateInv() {
+		freeSpace.item(0).childNodes[0].src="images/cheese-aseprite/rune-affinage.png";
 		freeSpace.item(0).classList.add('full');
 		freeSpace.item(0).classList.remove("notFull");
-	});
+		if (freeSpace.length == 0) {
+		inventory.item(0).classList.add("full");
+		fromanaBottle.classList.remove('active');
+		fromanaBottle.removeEventListener("click", manipulateInv)
+		}
+	};
+fromanaBottle.addEventListener("click", manipulateInv);
 
 
 

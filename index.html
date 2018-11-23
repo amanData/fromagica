@@ -4,6 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Fromagica</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Roboto+Mono|Roboto+Slab" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
 </head>
@@ -22,22 +23,29 @@
 				<h2>Crafting area</h2>
 				<div class="hexCraft">
 					<h3>Hexagone of craft</h3>
+					<div class="hexCraftSlot">
+						<div class="craftSlot notFullCraft"></div>
+						<div class="craftSlot notFullCraft"></div>
+						<div class="craftSlot notFullCraft"></div>
+						<div class="craftSlot notFullCraft"></div>
+						<div class="craftSlot notFullCraft"></div>
+					</div>
 				</div>
 				<div class="runeLibrary">
 					<h3>Rune library</h3>
 					<div class="inventory">
-						<div class="inventorySlot notFull"></div>
-						<div class="inventorySlot notFull"></div>
-						<div class="inventorySlot notFull"></div>
-						<div class="inventorySlot notFull"></div>
-						<div class="inventorySlot notFull"></div>
-						<div class="inventorySlot notFull"></div>
-						<div class="inventorySlot notFull"></div>
-						<div class="inventorySlot notFull"></div>
-						<div class="inventorySlot notFull"></div>
-						<div class="inventorySlot notFull"></div>
-						<div class="inventorySlot notFull"></div>
-						<div class="inventorySlot notFull"></div>
+						<div class="inventorySlot notFull"><img style="width: 100%;"></div>
+						<div class="inventorySlot notFull"><img style="width: 100%;"></div>
+						<div class="inventorySlot notFull"><img style="width: 100%;"></div>
+						<div class="inventorySlot notFull"><img style="width: 100%;"></div>
+						<div class="inventorySlot notFull"><img style="width: 100%;"></div>
+						<div class="inventorySlot notFull"><img style="width: 100%;"></div>
+						<div class="inventorySlot notFull"><img style="width: 100%;"></div>
+						<div class="inventorySlot notFull"><img style="width: 100%;"></div>
+						<div class="inventorySlot notFull"><img style="width: 100%;"></div>
+						<div class="inventorySlot notFull"><img style="width: 100%;"></div>
+						<div class="inventorySlot notFull"><img style="width: 100%;"></div>
+						<div class="inventorySlot notFull"><img style="width: 100%;"></div>
 					</div>
 				</div>
 			</section>
@@ -46,19 +54,19 @@
 		<section class="gameboard">
 			<!-- SCHOOL SECTION -->
 			<div class="fromanaBar">
-				<img id="fromanaBottle" src="images/cheese-aseprite/fromana.png">
+				<img id="fromanaBottle" class="active" src="images/cheese-aseprite/fromana.png">
 			</div>
 			<div class="school">
 				<div id="cheese">
 					<div class="fromana">
 					Fromana : <span id="fm"></span>
 					</div>
-					<button type='button' id="cheeseBtn" onclick="genFromana(1)"><img id="cheddar" src="images/cheese-aseprite/cheddar.png"></button>
+					<button type='button' id="cheeseBtn"><img id="cheddar" src="images/cheese-aseprite/cheddar.png"></button>
 				</div>
 				<div class="timetable">
 					<h2>Timetable</h2>
 					<div id="upgrades">
-					<button id="magicSchool" onclick="buyRuneWheel()">Go to dairy magic school</button>
+					<button type='button' id="magicSchool">Go to dairy magic school</button>
 					Cost : <span id=schoolCost>24</span> fromana
 					</div>
 				</div>
